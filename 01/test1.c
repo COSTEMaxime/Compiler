@@ -29,6 +29,8 @@ int maxargs(A_stm stm) {
         case A_printStm:
             return itemsCount(stm->u.print.exps);
     }
+
+    return 0;
 }
 
 int maxargs_exp(A_exp exp) {
@@ -37,6 +39,8 @@ int maxargs_exp(A_exp exp) {
     } else if (exp->kind == A_eseqExp) {
         return max(maxargs_exp(exp->u.eseq.exp), maxargs(exp->u.eseq.stm));
     }
+
+    return 0;
 }
 
 int max(int a, int b) {

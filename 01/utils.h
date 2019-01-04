@@ -6,7 +6,7 @@ typedef char bool;
 #define TRUE  1
 #define FALSE 0
 
-void *checked_malloc(size_t);
+void *checked_malloc(size_t size);
 string String(char *);
 
 typedef struct U_boolList_ *U_boolList;
