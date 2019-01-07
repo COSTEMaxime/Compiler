@@ -43,10 +43,6 @@ int maxargs_exp(A_exp exp) {
     return 0;
 }
 
-int max(int a, int b) {
-    return a > b ? a : b;    
-}
-
 int itemsCount(A_expList exps) {
     if (exps->kind == A_pairExpList) {
         return itemsCount(exps->u.pair.tail) + 1;
@@ -54,3 +50,21 @@ int itemsCount(A_expList exps) {
 
     return 1;
 }
+
+
+/* Exercise  2 */
+
+Table_ Table(string id, int value, Table_ tail) {
+    Table_ table = checked_malloc(sizeof(table));
+
+    table->id = id;
+    table->value = value;
+    table->tail = tail;
+
+    return table;
+}
+
+void interp(A_stm stm) {
+
+}
+

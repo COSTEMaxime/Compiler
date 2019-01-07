@@ -1,4 +1,5 @@
 #include <assert.h>
+#include "stdlib.h"
 
 typedef char *string;
 typedef char bool;
